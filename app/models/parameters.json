@@ -1,0 +1,8 @@
+{
+    "hn": "localhost",
+    "db": "s2web",
+    "port":"root",
+    "charset": "utf8" ,
+    "un": "Mika",
+    "pw": "1"
+  }
