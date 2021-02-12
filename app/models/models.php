@@ -166,6 +166,9 @@ Class Model{
              }
           }
                             
+
+          //Je ne pense pas qu'on soit autorisé à effectuer les affichages dans les models, mais je ne vois pas comment faire autrement. Une solution serait de definir la fonction
+          //d'affichage dans views et le recuperer dans models, mais pareil je ne pense pas que models peut utiliser la fonction de view dans MVC.
         public function gettab(){
             
                 try{
