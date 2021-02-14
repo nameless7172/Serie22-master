@@ -166,19 +166,24 @@ Class Model{
              }
           }
                             
-
+          
           //Je ne pense pas qu'on soit autorisé à effectuer les affichages dans les models, mais je ne vois pas comment faire autrement. Une solution serait de definir la fonction
           //d'affichage dans views et le recuperer dans models, mais pareil je ne pense pas que models peut utiliser la fonction de view dans MVC.
         public function gettab(){
             
                 try{
+                    echo ' <div class = "test"> ' ;
+
                     $sql = 'SELECT * FROM classiques';
                     $statement = $this->pdo->prepare($sql);
                     $statement->execute();
                     
                     while (($row = $statement->fetch(PDO::FETCH_BOTH)) !== false) {
                     echo <<<_END
+                    
+                    
                     <pre>
+                    
                     Auteur $row[0]
                     Titre $row[1]
                     Catégorie $row[2]
@@ -206,6 +211,7 @@ Class Model{
                 
                 _END;
                     }
+                 echo '</div>'; 
                 } catch (PDOException $e) {
                     echo "Error: ".$e->getMessage();
                 }
